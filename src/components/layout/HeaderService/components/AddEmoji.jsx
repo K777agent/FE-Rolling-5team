@@ -1,13 +1,8 @@
 import React from "react";
-import addEmogilImage from "../../../../assets/icons/ic_add-emoji.svg";
+import EmojiDropdown from "../../../UI/Dropdown/EmojiDropdown";
 
 function AddEmoji() {
-  return (
-    <button>
-      <img src={addEmogilImage} alt="이모지 추가" />
-      추가
-    </button>
-  );
+  return <EmojiDropdown />;
 }
 
 export default AddEmoji;

@@ -1,14 +1,8 @@
 import React from "react";
-import shareImage from "../../../../assets/icons/ic_share.svg";
+import ShareDropdown from "../../../UI/Dropdown/ShareDropdown";
 
 function ExternalSharing() {
-  return (
-    <>
-      <button>
-        <img src={shareImage} alt="외부링크 공유" />
-      </button>
-    </>
-  );
+  return <ShareDropdown />;
 }
 
 export default ExternalSharing;
