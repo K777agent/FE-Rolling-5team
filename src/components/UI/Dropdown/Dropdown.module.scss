@@ -16,7 +16,6 @@
     border: 1px solid var(--gray-300);
     border-radius: 6px;
     background-color: var(--white);
-
     display: flex;
     align-items: center;
   }
@@ -28,9 +27,8 @@
     background: white;
     border: 1px solid var(--gray-300);
     border-radius: 8px;
-
     box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.08);
-
     z-index: 20;
+    cursor: pointer;
   }
 }

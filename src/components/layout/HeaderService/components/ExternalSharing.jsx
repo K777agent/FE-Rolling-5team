@@ -1,5 +1,5 @@
 import React from "react";
-import ShareDropdown from "../../../UI/Dropdown/ShareDropdown";
+import ShareDropdown from "../../../UI/Dropdown/components/ShareDropdown";
 
 function ExternalSharing() {
   return <ShareDropdown />;
