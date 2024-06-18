@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Dropdown from "../Dropdown";
 import arrowDown from "../../../../assets/icons/ic_arrow_down.svg";
 import ExpandedReactionDropdownStyles from "./ExpandedReactionDropdown.module.scss";
@@ -23,20 +22,29 @@ export function ExpandedReactionDropdown({
       trigger={<img src={arrowDown} alt="추가된 이모티콘 더보기" />}
       triggerClassName={ExpandedReactionDropdownStyles.trigger}
     >
-      <div
-        className={`${reactionEmojiStyles["emoji-container"]} ${ExpandedReactionDropdownStyles["emoji-container"]}`}
-      >
-        {reactions.map(({ id, emoji, count }) => (
-          <span
-            key={id}
-            className={reactionEmojiStyles["emoji-button"]}
-            onClick={() => handleEmojiSelect(id, emoji)}
-          >
-            <span className={reactionEmojiStyles["emoji"]}>{emoji} </span>
-            <span className={reactionEmojiStyles["emoji"]}>{count}</span>
-          </span>
-        ))}
-      </div>
+      {!reactions.length && (
+        <span
+          className={ExpandedReactionDropdownStyles["emoji-empty-container"]}
+        >
+          감정을 표현해보세요!
+        </span>
+      )}
+      {reactions.length > 0 && (
+        <div
+          className={`${reactionEmojiStyles["emoji-container"]} ${ExpandedReactionDropdownStyles["emoji-container"]}`}
+        >
+          {reactions.map(({ id, emoji, count }) => (
+            <span
+              key={id}
+              className={reactionEmojiStyles["emoji-button"]}
+              onClick={() => handleEmojiSelect(id, emoji)}
+            >
+              <span className={reactionEmojiStyles["emoji"]}>{emoji} </span>
+              <span className={reactionEmojiStyles["emoji"]}>{count}</span>
+            </span>
+          ))}
+        </div>
+      )}
     </Dropdown>
   );
 }

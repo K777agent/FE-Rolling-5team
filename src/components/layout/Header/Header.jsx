@@ -35,7 +35,8 @@ function Header() {
       <header className={HeaderStyles.main}>
         <div className={HeaderStyles.header}>
           <RollingPaperLogo />
-          {(isPage.isHomePage || isPage.isListPage) && <CreateRollingPaper />}
+          {/* {(isPage.isHomePage || isPage.isListPage) && <CreateRollingPaper />} */}
+          {<CreateRollingPaper />}
         </div>
       </header>
       {(isPage.isCreatedRollingListPage || isPage.isEditPage) && (
